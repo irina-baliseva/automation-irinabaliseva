@@ -26,15 +26,16 @@ describe('Test suite', function() {
         cy.get(':nth-child(1) > .btn').click()
         cy.contains('Rooms')
         cy.get('h2 > .btn').click()
-        cy.get(':nth-child(1) > select').select('double')//??????????????????select val olika
-        cy.get(':nth-child(2) > input').type('103')//???????????trycka på pilarna
-        cy.get(':nth-child(3) > input').type('1')//pilarna
+        cy.get(':nth-child(1) > select').select('double')
+        cy.get(':nth-child(2) > input').type('103')
+        cy.get(':nth-child(3) > input').type('1')
         cy.get('.checkbox').click()
-        cy.get(':nth-child(5) > input').type('1800')//pilarna
+        cy.get(':nth-child(5) > input').type('1800')
         cy.get(':nth-child(6) > select').select(['Balcony','Ensuite'])
         cy.get('.blue').click()
         cy.contains('Room 103')
-
+        cy.get('.user > .btn').click()
+        cy.contains('Login')
     })
     
     it('test case 3-Ta bort ett rum', function () {
@@ -50,7 +51,8 @@ describe('Test suite', function() {
         cy.get(':nth-child(3) > .action > img').click()
         cy.get('.menu > :nth-child(2)').click()
         cy.contains('Rooms')
-
+        cy.get('.user > .btn').click()
+        cy.contains('Login')
     })
 
     it('test case 4-Redigera information om en kund', function () {
@@ -71,6 +73,8 @@ describe('Test suite', function() {
         cy.contains('Clients')
         cy.get(':nth-child(3) > .btn').click()
         cy.contains('Tester Hotel Overview')
+        cy.get('.user > .btn').click()
+        cy.contains('Login')
         
     })
 
@@ -90,6 +94,8 @@ describe('Test suite', function() {
         cy.get('.checkbox').click()
         cy.get('.blue').click()
         cy.contains('Bills')
+        cy.get('.user > .btn').click()
+        cy.contains('Login')
     })
 
     it('test case 6-Redigera ett kvitto', function () {
@@ -108,6 +114,8 @@ describe('Test suite', function() {
         cy.get('.checkbox').click()
         cy.get('.blue').click()
         cy.contains('Bills')
+        cy.get('.user > .btn').click()
+        cy.contains('Login')
     })
 
     it('test case 7- Ta bort ett kvitto', function () {
@@ -123,6 +131,8 @@ describe('Test suite', function() {
         cy.get(':nth-child(2) > .action > img').click()
         cy.get('.menu > :nth-child(2)').click()
         cy.contains('Bills')
+        cy.get('.user > .btn').click()
+        cy.contains('Login')
     })
 
     it('test case 8- Skapa bokning', function () {
