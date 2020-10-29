@@ -8,10 +8,11 @@ const saveButton = '.blue'
 
 //Actions/funktions
 
-function editClient(cy, contentToConfirm) {
-    cy.get(phoneField).clear().type(faker.phone.phoneNumber())
+function editClient(cy) {
+    let phoneNumber= faker.phone.phoneNumber()
+    cy.get(phoneField).clear().type(phoneNumber)
     cy.get(saveButton).click()
-    cy.contains(contentToConfirm)
+    cy.contains(phoneNumber)
 }
 
 

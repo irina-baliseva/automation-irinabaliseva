@@ -10,6 +10,7 @@ import * as oneClientFuncs from '../pages/oneClientPage'
 import * as newClientFuncs from '../pages/newClientPage'
 import * as reservationsFuncs from '../pages/reservationsPage'
 import * as newReservationsFuncs from '../pages/newReservationsPage'
+
 //test suite
 describe('Test suite', function(){
     //före varje test case
@@ -36,18 +37,16 @@ describe('Test suite', function(){
         dashBoardFuncs.checkTitleOfDashboardPage(cy)
         dashBoardFuncs.viewRooms(cy, 'Rooms')
         roomsFuncs.clickThreePointsDelete(cy)
-        //kolla att den försvann??
     })
 
     it('Test case 3- Edit a clients', function(){
         dashBoardFuncs.checkTitleOfDashboardPage(cy)
         dashBoardFuncs.viewClients(cy, 'Clients')
         clientsFuncs.clickThreePointsEdit(cy)
-        oneClientFuncs.editClient(cy, 'Clients')
-        //kola att ändrades??
+        oneClientFuncs.editClient(cy)
     })
 
-    it('Test case 4- Create a clients', function(){
+    it('Test case 4- Create a client', function(){
         dashBoardFuncs.checkTitleOfDashboardPage(cy)
         dashBoardFuncs.viewClients(cy, 'Clients')
         clientsFuncs.clickCreateClientButton(cy, 'New Client')

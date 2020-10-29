@@ -11,13 +11,13 @@ const saveButton = '.blue'
 //Actions /funktions
 
 function createReservation (cy, contentToConfirm){
-    cy.get(startField).type('2020-11-23')//hur genererar start och slut datum
+    cy.get(startField).type('2020-11-23')
     cy.get(endField).type('2020-11-30')
-    cy.get(clientField).select('Mikael Eriksson (#2)')//hur väljer man slumpmässigt
+    cy.get(clientField).select('Mikael Eriksson (#2)')
     cy.get(roomField).select('Floor 1, Room 101')
     cy.get(billField).select('ID: 1')
     cy.get(saveButton).click()
-    cy.contains(contentToConfirm)//vilket parameter ska användas för kontrol??
+    cy.contains(contentToConfirm)
 }
 
 //Exports

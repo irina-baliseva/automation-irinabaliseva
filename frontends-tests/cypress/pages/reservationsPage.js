@@ -3,7 +3,7 @@
 //Elements
 
 const createReservationButton = 'h2 > .btn'
-const threePointDelete = ':nth-child(2) > .action > img'
+const threePoint = ':nth-child(2) > .action > img'
 const deleteButton = '.menu > :nth-child(2)'
 
 //Actions /funktions
@@ -14,7 +14,7 @@ function clickCreateReservationButton (cy, contentToConfirm){
 }
 
 function clickthreePointDelete (cy, contentToConfirm){
-    cy.get(threePointDelete).click()
+    cy.get(threePoint).click()
     cy.get(deleteButton).click()
     cy.contains(contentToConfirm)
 }

@@ -15,7 +15,7 @@ const featuresField =':nth-child(6) > select'
 //Actions/funktions
 
 function createRoom (cy){
-    cy.get(categoryField).select('double')
+    cy.get(categoryField).select('twin')
     let roomNumber=faker.random.number({min:100, max:150})
     cy.get(numberField).type(roomNumber)
     cy.get(floorField).type(faker.random.number(8))
